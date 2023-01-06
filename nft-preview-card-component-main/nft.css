@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+body {
+  background-color: #00001a;
+}
+.container {
+  width: 280px;
+  background-color: #001131;
+  padding: 20px 10px;
+  --webkit-border-radius: 15px;
+  --moz-border-radius: 15px;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image {
+  text-align: center;
+}
+.image img {
+  border-radius: 10px;
+}
+h3 {
+  color: white;
+  margin: 15px 0;
+}
+h3 + p {
+  color: #777;
+  line-height: 1.5em;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.image img {
+  width: 230px;
+  height: 230px;
+}
+.parent {
+  display: flex;
+  justify-content: space-between;
+}
+.three {
+  display: flex;
+}
+.three img {
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.three .text span {
+  color: #b3b3ff;
+}
+.text {
+  margin-left: 20px;
+  margin-top: 5px;
+  color: white;
+}
+hr {
+  width: 90%;
+  border-color: #737373;
+  margin: 10px 0;
+}
+.content {
+  padding-left: 23px;
+}
+.parent span {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.parent .one span {
+  color: aqua;
+  margin-left: 6px;
+}
+.parent .two {
+  margin-right: 10px;
+}
+.parent .two span {
+  color: #777;
+  margin-right: 5px;
+  font-weight: bold;
+  margin-left: 6px;
+}
