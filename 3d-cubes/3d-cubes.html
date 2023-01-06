@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #3d3d3d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-variant: small-caps;
+        }
+
+        .container {
+            display: flex;
+            transform-style: preserve-3d;
+            gap: 40px;
+            transform: rotateY(30deg) rotateX(10deg);
+        }
+
+        .container .text {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d;
+            transition: 2.5s ease-in-out;
+        }
+
+        .container:hover .text {
+            transform: rotateX(360deg);
+        }
+
+        .container .text::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #373737;
+            transform-origin: left;
+            transform: rotateY(90deg) translateX(-50px);
+        }
+
+        .container .text span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#434343, #535353);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #fff;
+            transform-style: preserve-3d;
+            transform: rotateX(calc(90deg*var(--i))) translateZ(50px);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text" style="--j:0;">
+            <span style="--i:0">A</span>
+            <span style="--i:1">B</span>
+            <span style="--i:2">D</span>
+            <span style="--i:3">L</span>
+            <span style="--i:4">L</span>
+            <span style="--i:5">A</span>
+            <span style="--i:6">H</span>
+        </div>
+        <div class="text" style="--j:1;">
+            <span style="--i:0">Y</span>
+            <span style="--i:1">A</span>
+            <span style="--i:2">S</span>
+            <span style="--i:3">S</span>
+            <span style="--i:4">I</span>
+            <span style="--i:5">N</span>
+            <span style="--i:6">E</span>
+        </div>
+        <div class="text" style="--j:2;">
+            <span style="--i:0">O</span>
+            <span style="--i:1">T</span>
+            <span style="--i:2">H</span>
+            <span style="--i:3">M</span>
+            <span style="--i:4">A</span>
+            <span style="--i:5">N</span>
+            <span style="--i:6">E</span>
+        </div>
+        <div class="text" style="--j:3;">
+            <span style="--i:0">*</span>
+            <span style="--i:1">O</span>
+            <span style="--i:2">U</span>
+            <span style="--i:3">H</span>
+            <span style="--i:4">I</span>
+            <span style="--i:5">B</span>
+            <span style="--i:6">*</span>
+        </div>
+    </div>
+</body>
+
+</html>
